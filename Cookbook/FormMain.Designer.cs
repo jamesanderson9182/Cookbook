@@ -39,6 +39,7 @@
             this.listAllIngredients = new System.Windows.Forms.ListBox();
             this.labelAllIngredients = new System.Windows.Forms.Label();
             this.buttonAddToRecipe = new System.Windows.Forms.Button();
+            this.listUsers = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.cookbookDataSet)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,11 +137,20 @@
             this.buttonAddToRecipe.UseVisualStyleBackColor = true;
             this.buttonAddToRecipe.Click += new System.EventHandler(this.buttonAddToRecipe_Click);
             // 
+            // listUsers
+            // 
+            this.listUsers.FormattingEnabled = true;
+            this.listUsers.Location = new System.Drawing.Point(196, 293);
+            this.listUsers.Name = "listUsers";
+            this.listUsers.Size = new System.Drawing.Size(120, 160);
+            this.listUsers.TabIndex = 10;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 548);
+            this.Controls.Add(this.listUsers);
             this.Controls.Add(this.buttonAddToRecipe);
             this.Controls.Add(this.listAllIngredients);
             this.Controls.Add(this.labelAllIngredients);
@@ -173,6 +183,7 @@
         private System.Windows.Forms.ListBox listAllIngredients;
         private System.Windows.Forms.Label labelAllIngredients;
         private System.Windows.Forms.Button buttonAddToRecipe;
+        private System.Windows.Forms.ListBox listUsers;
     }
 }
 

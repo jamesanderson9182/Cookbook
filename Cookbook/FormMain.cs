@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -25,6 +26,8 @@ namespace Cookbook
         {
             PopulateRecipies();
             PopulateAllIngredients();
+            PopulateUsers();
+
         }
 
         private void PopulateRecipies()
@@ -154,6 +157,32 @@ namespace Cookbook
             }
             PopulateRecipies();
         }
+        private void PopulateUsers()
+        {
+            ArrayList userList = new ArrayList();
+
+            User user = new User()
+            {
+                Id = 1,
+                Name = "James"
+            };
+
+            User user2 = new User()
+            {
+                Id = 2,
+                Name = "Lauren"
+            };
+
+            userList.Add(user);
+            userList.Add(user2);
+
+            // From User.cs
+            listUsers.ValueMember = "Id";
+            listUsers.DisplayMember = "Name";
+            listUsers.DataSource = userList;
+        }
     }
+
+
 
 }
